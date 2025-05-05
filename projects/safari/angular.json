@@ -26,14 +26,15 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
+  "src/favicon.ico",
+  "src/assets"
+]
+,
+"styles": [
+  "src/styles.less"
+
+
+],
             "scripts": []
           },
           "configurations": {

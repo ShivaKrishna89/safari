@@ -1,0 +1,34 @@
+.header-container {
+    background-color: #fbf7f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    >.title {
+        img {
+            height: 90px;
+            width: 112px;
+        }
+    } 
+    & > .heading {
+        gap: 10px;
+        display: flex;
+        cursor: pointer;
+            gap: 54px;
+            color: white;
+            background-color: #254366;
+            height: 47px;
+            width: 50%;
+            margin-top: 23px;
+            border-radius: 20px 0 20px 0;
+
+            > a {
+                margin-left: 12px;
+                padding: 15px;
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: antiquewhite;
+                }
+            }
+    }
+}
