@@ -1,5 +1,15 @@
 <div class="home-container">
-    <div style="position: relative; overflow: hidden; ">
-        <img src="assets/byd.png" alt="Logo" />  
-</div>
+  <div style="position: relative;">
+      <img src="assets/byd.png" alt="Logo" />
+      <h5>Our Available Destinations</h5>
+      <div class="carousel-container">
+          <div class="scroll-wrapper">
+              <div class="destinations">
+                  <div class="destination-item" *ngFor="let item of destinations">
+                      <img [src]="item.icon" class="destination-img" alt="destination">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

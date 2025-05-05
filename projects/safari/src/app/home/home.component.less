@@ -1,7 +1,85 @@
 .home-container {
     > div > img {
-        height: 500px;
-    min-width: 98vw;
-    border-radius: 10px;
+        height: 489px;
+        min-width: 84vw;
+        border-radius: 10px;
     }
+
+    >div {
+      background-image: url(https://thesafaritours.in/wp-content/uploads/2025/01/46.png);
+      background-position: center center;
+      background-size: cover;
+    }
+}
+
+h5{
+  margin-top: 72px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.destinations {
+  display: flex;
+  flex-direction:row;
+  overflow: auto hidden;
+  gap: 116px;
+
+
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+  width: 317%;
+  border: 0px;
+}
+
+
+.no-border {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-image: url(https://thesafaritours.in/wp-content/uploads/2025/01/46.png);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: scrollDestinations 15s linear infinite;
+}
+.destinations {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.destination-item {
+  width: 150px;
+  flex-shrink: 0;
+  display: inline-block;
+  border: none;
+  width: 150px;
+  margin-right: 15px;
+}
+.destination-img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+
+@keyframes scrollDestinations {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
