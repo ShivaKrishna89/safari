@@ -7,20 +7,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
 })
-export class HomeComponent implements AfterViewInit {
-  ngAfterViewInit() {
-    setInterval(() => {
-      const container = this.destinationsContainer.nativeElement;
-      const currentPos = container.scrollLeft;
+export class HomeComponent {
 
-      if (currentPos >= container.scrollWidth / 2) {
-        container.scrollLeft = 0;
-        container.scrollLeft += 100;
-      }
-    }, 2000);
-  }
-
-  @ViewChild('destinationsContainer', { static: false }) destinationsContainer: any;
 
 destinations :any = [
   {icon: 'assets/GOKARNA-DANDELI.webp' },
@@ -33,6 +21,15 @@ destinations :any = [
   {icon: 'assets/MEGHALAYA.webp'},
   {icon: 'assets/OOTY.webp'},
   {icon: 'assets/RAJASTHAN.webp'},
+]
+
+trendingDestinations :any = [
+  {icon: 'assets/GOKARNA-DANDELI.webp', name:'Gokarna', img:'assets/GokarnaImg.webp' },
+  {icon: 'assets/KERALA.webp', name:'Kerala', img:'assets/keralaImg.webp'},
+  {icon: 'assets/KASHMIR.webp', name:'Kashmir', img:'assets/kashmirImg.webp'},
+  {icon: 'assets/MANALI.webp', name:'Manali', img:'assets/manalliImg.webp'},
+  {icon: 'assets/GOA.webp', name:'Goa', img:'assets/GoaImg.webp'},
+  {icon: 'assets/OOTY.webp', name:'Ooty', img:'assets/OotyImg.webp'},
 ]
 
 }
