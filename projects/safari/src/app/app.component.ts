@@ -4,13 +4,14 @@ import { PlatformModelService } from './platform-model.service';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterModule,HomeComponent,HeaderComponent,FooterComponent],
+  imports: [RouterOutlet,RouterModule,HomeComponent,HeaderComponent,FooterComponent,CarouselModule,CarouselModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.less'
+  styleUrl: './app.component.less',
 })
+
 export class AppComponent implements OnInit{
   title = 'BYD';
   isMobile:Boolean = false;
@@ -46,4 +47,4 @@ export class AppComponent implements OnInit{
     this.platformModelService.device.orientation = window.matchMedia("(orientation: landscape)").matches ? "landscape" : "portrait";
   }
 }
-  
+

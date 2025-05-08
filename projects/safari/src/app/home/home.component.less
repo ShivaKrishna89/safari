@@ -11,7 +11,9 @@
       background-size: cover;
     }
 }
-
+.destination-item {
+  width: 64% !important;
+}
 h5{
   margin-top: 72px;
   text-align: center;
@@ -126,6 +128,9 @@ h5{
   z-index: 10;
   background-size: cover;
   background-position: 50%;
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .overlay-text {
@@ -147,4 +152,47 @@ h5{
 }
 .overlay {
   padding: 21px;
+}
+
+
+.bg-image:hover::before {
+  transform: scale(1.1);
+}
+
+.pixels{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 474px;
+  padding: 82px;
+  z-index: 1;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    > h4 {
+    font-weight: bold;
+    text-align: center;
+    }
+    > p {
+      font-size: 15px;
+      margin-top: 14px;
+    }
+  }
+}
+
+.carousel-item {
+  & > img {
+    height: 400px;
+    min-width: 42vw;
+    border-radius: 10px;
+
+  }
+}
+
+.memories {
+  > h2 {
+    text-align: center;
+  }
 }

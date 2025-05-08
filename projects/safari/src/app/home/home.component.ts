@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, model, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,CarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
 })
@@ -22,6 +23,20 @@ destinations :any = [
   {icon: 'assets/OOTY.webp'},
   {icon: 'assets/RAJASTHAN.webp'},
 ]
+imageSlides = [
+  { src: '/assets/Untitled-design-1.webp', caption: 'Beautiful Mountain' },
+  { src: '/assets/Untitled-design-2.webp', caption: 'Kashmir' },
+  { src: '/assets/Untitled-design-3.webp', caption: 'Sunny Beach' },
+  { src: '/assets/Untitled-design-4.webp', caption: 'Misty Forest' },
+  { src: '/assets/Untitled-design-6.webp', caption: 'Serene Lake' },
+  { src: '/assets/Untitled-design-7.webp', caption: 'Golden Desert' },
+  { src: '/assets/Untitled-design-8.webp', caption: 'Snowy Peaks' },
+  { src: '/assets/Untitled-design-9.webp', caption: 'Rainy City' },
+  { src: '/assets/Untitled-design-10.webp', caption: 'Green Hills' },
+  { src: '/assets/Untitled-design-11.webp', caption: 'Urban Skyline' },
+  { src: '/assets/Untitled-design-12.webp', caption: 'Starry Night' }
+];
+
 
 trendingDestinations :any = [
   {icon: 'assets/GOKARNA-DANDELI.webp', name:'Gokarna', img:'assets/GokarnaImg.webp' },

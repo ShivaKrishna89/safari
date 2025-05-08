@@ -2,15 +2,20 @@
     <div style="position: relative;">
         <img src="assets/byd.png" alt="Logo" />
         <h5>Our Available Destinations</h5>
-        <div class="carousel-container">
-            <div class="scroll-wrapper">
-                <div class="destinations">
-                    <div class="destination-item" *ngFor="let item of destinations">
-                        <img [src]="item.icon" class="destination-img" alt="destination">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <carousel
+        [interval]="3000"
+        [noPause]="true"
+        [itemsPerSlide]="5"
+        [singleSlideOffset]="true"
+        [isAnimated]="true"
+        [showIndicators]="true"
+      >
+        <slide *ngFor="let item of destinations">
+          <img [src]="item.icon" class="d-block destination-item" alt="destination">
+          <div class="carousel-caption">{{ item.caption }}</div>
+        </slide>
+      </carousel>
+
     </div>
     <h5>Our Trending Destinations</h5>
     <div class="ourdestinations">
@@ -31,4 +36,65 @@
 
     </div>
 
+    </div>
+    <div class="pixels">
+      <div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="/assets/pexels96.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/assets/pexels97.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/assets/pexels98.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/assets/pexels99.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/assets/pexels100.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div>
+      <h4>Discover the World, Experience the Unforgettable</h4>
+      <p>
+        At BYDTravels, we make exploring the world effortless and exciting. Our services are designed with simplicity,
+        security, and reliability in mind. Whether you're planning a peaceful getaway or an adventure-filled trip, our
+        intuitive booking process ensures a smooth journey from start to finish. We prioritize your safety and peace of
+        mind, providing secure and trustworthy travel experiences every time. Let us help you create memories that last a lifetime.
+      </p>
+    </div>
+    <div class="memories">
+      <h2>Let’s create memories together!</h2>
+      <div>
+        <carousel
+        [interval]="3000"
+        [noPause]="true"
+        [itemsPerSlide]="3"
+        [singleSlideOffset]="true"
+        [isAnimated]="true"
+        [showIndicators]="true"
+      >
+        <slide *ngFor="let img of imageSlides">
+          <img [src]="img.src" class="d-block w-100" [alt]="img.caption" />
+          <div class="carousel-caption">{{ img.caption }}</div>
+        </slide>
+      </carousel>
+
+
+</div>
+
+    </div>
 </div>
