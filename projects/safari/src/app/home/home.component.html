@@ -1,6 +1,20 @@
 <div class="home-container">
-    <div style="position: relative;">
-        <img src="assets/byd.png" alt="Logo" />
+  <div class="first-page">
+    <div>
+      <carousel
+        [interval]="3000"
+        [noPause]="true"
+        [itemsPerSlide]="1"
+        [singleSlideOffset]="false"
+        [isAnimated]="true"
+        [showIndicators]="true"
+      >
+        <slide *ngFor="let img of topImages">
+          <img class="firstSlide wide-image" [src]="img.src" alt="caption" />
+        </slide>
+      </carousel>
+
+  </div>
         <h5>Our Available <span>Destinations</span></h5>
         <carousel
   id="carouselExampleInterval1"

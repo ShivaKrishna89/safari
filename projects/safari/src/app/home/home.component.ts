@@ -36,6 +36,18 @@ imageSlides = [
   { src: '/assets/Untitled-design-12.webp', caption: 'Starry Night' }
 ];
 
+topImages = [
+{src:'/assets/1.png'},
+{src:'/assets/2.png'},
+{src:'/assets/3.png'},
+{src:'/assets/4.png'},
+{src:'/assets/5.png'},
+{src:'/assets/6.png'},
+{src:'/assets/7.png'},
+{src:'/assets/8.png'},
+{src:'/assets/9.png'},
+{src:'/assets/10.png'},
+];
 
 trendingDestinations :any = [
   {icon: 'assets/GOKARNA-DANDELI.webp', name:'Gokarna', img:'assets/GokarnaImg.webp' },
