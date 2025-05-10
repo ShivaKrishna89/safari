@@ -32,7 +32,6 @@ imageSlides = [
   { src: '/assets/Untitled-design-7.webp', caption: 'Golden Desert' },
   { src: '/assets/Untitled-design-8.webp', caption: 'Snowy Peaks' },
   { src: '/assets/Untitled-design-9.webp', caption: 'Rainy City' },
-  { src: '/assets/Untitled-design-10.webp', caption: 'Green Hills' },
   { src: '/assets/Untitled-design-11.webp', caption: 'Urban Skyline' },
   { src: '/assets/Untitled-design-12.webp', caption: 'Starry Night' }
 ];

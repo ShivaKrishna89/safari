@@ -1,8 +1,194 @@
-.carousel .carousel-item {
-  opacity: 0.6;
-  transition: opacity 0.5s ease;
+.carousel-item1 {
+  background-image: url('/assets/GoaImg.webp') !important;
+  min-height: 500px !important;
 }
 
-.carousel .carousel-item.active {
-  opacity: 1;
+.carousel-item2 {
+  background-image: url('/assets/OotyImg.webp') !important;
+  min-height: 500px !important;
+}
+
+.carousel-item3 {
+  background-image: url('/assets/RajasthanImg.jpeg') !important;
+  min-height: 500px !important;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.pixels {
+  min-height: 100vh;
+    flex: 1;
+
+}
+.carousel-caption {
+  // position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > button {
+    border: 0px;
+    padding: 7px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #ef4823;
+      border: 0px;
+    }
+  }
+  & > h5 {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+
+.imageSlide {
+  height: 389px;
+  width: 411px;
+  border-radius: 12px;
+}
+
+
+.packages  {
+  margin-top: 94px;
+  & > h2 {
+    text-align: center;
+
+  }
+
+}
+span {
+  color: #ef4823;;
+}
+
+
+.aimodel {
+  min-height: auto;
+  text-align: center;
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 611px;
+  margin: 78px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aimodel h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.aimodel span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.ask-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.clear-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #bd1919;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ask-btn:hover {
+  background: #0056b3;
+}
+
+.openAI {
+  margin-top: 20px;
+}
+
+.option {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  margin: 8px auto;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: #e2f0ff;
+}
+
+.destination-card {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.hiddengems {
+  min-height: auto;
+  margin-top: 104px;
+  >h5 {
+    text-align: center;
+  }
+  & > div{
+    margin-top: 20px;
+  }
+
+}
+.name {
+  color: blue;
+}
+.destination {
+  color: blue;
+  font-weight: bold;
+}
+
+
+
+.description {
+  color: black;
+}
+
+.button-group  {
+  display: flex;
+      flex-direction: column;
+      width: 31%;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
 }

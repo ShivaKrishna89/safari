@@ -1,4 +1,5 @@
 .home-container {
+  min-height: 100vh;
     > div > img {
         height: 489px;
         min-width: 84vw;
@@ -195,4 +196,63 @@ h5{
   > h2 {
     text-align: center;
   }
+}
+
+#carouselExampleInterval1 {
+
+::ng-deep .carousel-inner {
+  padding: 88px !important;
+  margin-left: 34px !important;
+}
+
+
+/* Remove background and make sure the buttons are transparent */
+/* Position the left and right arrows at the ends of the carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute; /* Make them absolutely positioned */
+  top: 50%; /* Vertically center them */
+  transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove borders */
+  font-size: 30px; /* Adjust the size of the arrows */
+  opacity: 1; /* Ensure visibility */
+  z-index: 1; /* Make sure the controls appear above other elements */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Position the left arrow */
+}
+
+.carousel-control-next {
+  right: 10px; /* Position the right arrow */
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  color: #000; /* Set the arrow color (black in this case) */
+  font-size: 30px; /* Set the size for the icon */
+}
+
+/* Optional: Add hover effect */
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i {
+  transform: scale(1.1); /* Slightly scale the icon on hover */
+}
+
+.carousel-control-prev {
+  left: -61px; /* Move it further left — adjust as needed */
+  z-index: 10 !important; /* Ensure it stays above other elements */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+}
+.imageSlide {
+  height: 389px;
+  width: 327px;
+  border-radius: 12px;
+}
+
+span {
+  color: #ef4823;;
 }

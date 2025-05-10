@@ -1,21 +1,103 @@
-<carousel
-  [interval]="3000"
-  [noPause]="true"
-  [itemsPerSlide]="3"
-  [singleSlideOffset]="true"
-  [isAnimated]="true"
-  [showIndicators]="true"
->
-  <slide>
-    <img src="/assets/Untitled-design-1.webp" class="d-block w-100" alt="Beautiful Mountain" />
-    <div class="carousel-caption">Beautiful Mountain</div>
-  </slide>
-  <slide>
-    <img src="/assets/Untitled-design-2.webp" class="d-block w-100" alt="Kashmir" />
-    <div class="carousel-caption">Kashmir</div>
-  </slide>
-  <slide>
-    <img src="/assets/Untitled-design-3.webp" class="d-block w-100" alt="Sunny Beach" />
-    <div class="carousel-caption">Sunny Beach</div>
-  </slide>
-</carousel>
+<div class="pixels">
+<div class="carousel slide" id="carouselExampleInterval" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item carousel-item1 active" data-bs-interval="2000">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+      <h2>Get up to 2429 OFF on</h2>
+      <h5>5 Nights 6 Days Tour <span>Packages</span></h5>
+      <button class="contactUsButton">Contact Us</button>
+    </div>
+    </div>
+    <div class="carousel-item carousel-item2" data-bs-interval="2000">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+      <h2>Get up to 1229 OFF on</h2>
+      <h5>Enchanting Special Tour <span>Packages</span></h5>
+      <button class="contactUsButton">Contact Us</button>
+    </div>
+    </div>
+    <div class="carousel-item carousel-item3 " data-bs-interval="2000">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+      <h2>Get up to 975 OFF on</h2>
+      <h5>Weekend Tour <span>Packages</span></h5>
+      <button class="contactUsButton">Contact Us</button>
+    </div>
+    </div>
+  </div>
+
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="packages">
+  <h2 class="carousel-caption-slide">All Tours <span>Package's</span></h2>
+  <div>
+    <carousel
+    [interval]="3000"
+    [noPause]="true"
+    [itemsPerSlide]="3"
+    [singleSlideOffset]="true"
+    [isAnimated]="true"
+    [showIndicators]="true"
+  >
+    <slide *ngFor="let img of imageSlides">
+      <img [src]="img.img" class="imageSlide" [alt]="img.name" />
+      <div class="carousel-caption">{{ img.name }}</div>
+    </slide>
+  </carousel>
+</div>
+<div class="hiddengems">
+  <h5><span>Hidden gems</span> waiting to be explored</h5>
+  <div>
+    <carousel
+    [interval]="5000"
+    [noPause]="true"
+    [itemsPerSlide]="1"
+    [singleSlideOffset]="true"
+    [isAnimated]="true"
+    [showIndicators]="true"
+  >
+    <slide *ngFor="let img of hiddenGems">
+      <img [src]="img.img" class="imageSlide" [alt]="img.name" />
+      <div class="name">{{ img.name }}</div>
+      <div class="destination">{{ img.destination }}</div>
+      <div class="description">{{ img.description }}</div>
+    </slide>
+  </carousel>
+</div>
+</div>
+<div class="aimodel">
+  <h5>Need help <span>choosing your next adventure</span></h5>
+  <h5><span>Let our AI Travel Assistant guide you!</span></h5>
+
+  <button *ngIf="!destination" class="ask-btn" type="button" (click)="askAI()">Let’s Find Your Perfect Trip</button>
+
+  <div *ngIf="isClicked" class="openAI">
+    <h5>Choose One of the Following You Like the Most!</h5>
+    <div
+      class="option"
+      *ngFor="let option of travelInterests"
+      (click)="onClick(option)"
+    >
+      {{ option }}
+    </div>
+    <button class="clear-btn" type="button" (click)="clear()">Close</button>
+  </div>
+
+  <div *ngIf="destination" class="destination-card">
+    <h5>{{ destination.name }}</h5>
+    <img [src]="destination.img" alt="{{ destination.name }}" />
+    <div class="button-group">
+      <button class="ask-btn" type="button" (click)="tryAgain()">Wanna Try Again</button>
+      <button class="clear-btn" type="button" (click)="clear()">Close</button>
+    </div>
+  </div>
+
+
+
+</div>
