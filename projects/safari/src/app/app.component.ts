@@ -5,9 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { GoogleMapsModule } from '@angular/google-maps';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterModule,HomeComponent,HeaderComponent,FooterComponent,CarouselModule,CarouselModule],
+  imports: [RouterOutlet,RouterModule,HomeComponent,HeaderComponent,FooterComponent,CarouselModule,CarouselModule,GoogleMapsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',
 })

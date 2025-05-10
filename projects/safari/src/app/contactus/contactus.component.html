@@ -1,1 +1,62 @@
-<p>contactus works!</p>
+<div class="contactUs">
+  <div class="imageContactUs">
+    <h5>Contact Us</h5>
+  </div>
+  <div class="contact-section">
+    <h2>Get In Touch</h2>
+    <div class="sections">
+    <div class="section-1">
+      <i class="fa-solid fa-phone"></i>
+      <h4><span>Phone Number</span></h4>
+      <p>+91 9999996666</p>
+    </div>
+    <div class="section-2">
+      <i  class="fa-solid fa-envelope"></i>
+      <h4><span>Email</span></h4>
+      <p>bydtravelsindia&#64;gmail.com</p>
+    </div>
+    <div class="section-3">
+      <i   class="fa-solid fa-location-dot"></i>
+      <h4><span>Head Office</span></h4>
+      <p style="text-align: center;">MG Road Suryapet, Telangana - 508213, India</p>
+    </div>
+    <div class="section-4">
+      <i class="fa-solid fa-location-dot"></i>
+      <h4><span>Branch Office</span></h4>
+      <p style="text-align: center;">Bharath Nagar Siddipet, Telangana - 502103, India</p>
+    </div>
+  </div>
+  </div>
+  <div class="maps-container">
+
+  <div class="maps">
+    <h3 class="map-title">Our Branch <span>Location</span></h3>
+    <google-map
+    height="500px"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+  >
+    <map-marker [position]="markerPosition"></map-marker>
+  </google-map>
+</div>
+<div class="contactUs-section">
+  <h3 class="map-title">Book A <span>Tour</span></h3>
+<div class="contact-container">
+    <p>Reserve your ideal trip early for a hassle-free trip; secure comfort and convenience!</p>
+    <div class="connectMe-container">
+        <form  #contactForm (submit)="submitForm(); $event.preventDefault()" >
+        <input placeholder="Name*" type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+        <input placeholder="Email*" type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+        <input placeholder="Destination*" type="text" id="destination" [(ngModel)]="formData.destination" name="destination" required>
+        <input placeholder="Number Of Travelers*" type="text" id="travelers" [(ngModel)]="formData.travelers" name="travelers" required>
+        <button *ngIf="!isLoading" class="btn btn-primary" type="submit">Send</button>
+        <div *ngIf="isLoading" class="overlay">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
